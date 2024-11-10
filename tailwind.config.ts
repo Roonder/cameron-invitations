@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        inv: {
+          white: "#f0eee8",
+          "palid-pink": "#eea8b2",
+          black: "#232423",
+        }
       },
     },
   },
