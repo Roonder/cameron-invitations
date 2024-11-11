@@ -1,9 +1,11 @@
 import type { Document } from "mongoose";
 
 export interface Invitation extends Document {
-    family: string;
+    title: string;
+    name: string;
     phone: string;
     valid_to: number;
+    table: number;
     confirmation: boolean;
     confirmed_at: Date;
     createdAt: Date;

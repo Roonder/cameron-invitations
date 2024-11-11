@@ -6,7 +6,7 @@ export function useInvitations(id?: string) {
     const { data, isLoading, error, mutate } = useSWR(
         ["/api/invitations", id], 
         ([, id]) => getInvitations(id)
-    );
+);
 
     return {
         invitations: data,

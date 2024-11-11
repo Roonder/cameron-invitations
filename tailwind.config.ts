@@ -12,9 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         inv: {
-          white: "#f0eee8",
+          white: "#efeeea",
+          marble: "#f0eee8",
           "palid-pink": "#eea8b2",
           black: "#232423",
+          brown: "#aa7545"
         }
       },
     },

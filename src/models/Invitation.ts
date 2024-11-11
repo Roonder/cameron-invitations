@@ -2,13 +2,19 @@ import { Schema, models, model } from "mongoose";
 import { Invitation as InvitationInterface } from "@/interfaces/invitation.model";
 
 const invitationSchema = new Schema<InvitationInterface>({
-    family: {
+    title: {
+        type: String
+    },
+    name: {
         type: String
     },
     phone: {
         type: String,
     },
     valid_to: {
+        type: Number
+    },
+    table: {
         type: Number
     },
     confirmation: {
