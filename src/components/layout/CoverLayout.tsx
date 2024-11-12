@@ -7,22 +7,22 @@ import { CoverFooter } from "../elements/CoverFooter";
 import { CoverFamilyBanner } from "../elements/CoverFamilyBanner";
 
 interface CoverLayoutProps {
-    children: ReactNode;
+    family: string;
     props?: ReactNode;
 }
 
 export const CoverLayout = forwardRef(({
-    children
+    family,
+    ...props
 }: CoverLayoutProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <main ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative">
+        <main ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative" {...props}>
             <div className="border-2 border-inv-palid-pink border-dotted border-spacing-10 p-4 h-full">
                 <section className="h-full w-full relative overflow-hidden border-2 border-inv-brown">
                     <CoverCornerLeafs />
                     <UpperCover />
                     <CoverMirror />
-                    <CoverFamilyBanner family="Familia N" />
-                    {children}
+                    <CoverFamilyBanner family={family} />
                     <CoverFooter />
                 </section>
             </div>

@@ -10,9 +10,6 @@ export const FlowersDisplay = forwardRef(({
 }: FlowersDisplayProps, _ref: Ref<HTMLDivElement>) => {
     return (
         <>
-            <Image src={"/assets/center-flower.png"} width={120} height={60} alt="Decorative Vines" className="absolute -top-8 -translate-x-1/2 left-1/2" />
-            <Image src={"/assets/center-flower.png"} width={120} height={60} alt="Decorative Vines" className="absolute -bottom-8 -translate-x-1/2 left-1/2" />
-
             <Image src={"/assets/corner-flower.png"} width={120} height={60} alt="Decorative Vines" className="absolute -top-10 -left-10 -rotate-45" />
             <Image src={"/assets/corner-flower.png"} width={120} height={60} alt="Decorative Vines" className="absolute -top-10 -right-10 rotate-45" />
             <Image src={"/assets/corner-flower.png"} width={120} height={60} alt="Decorative Vines" className="absolute -bottom-10 -left-10 rotate-45 horizontal-reflect" />

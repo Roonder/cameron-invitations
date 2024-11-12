@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${lora.className}`}
+        className={`antialiased ${lora.className} overflow-hidden`}
       >
         {children}
       </body>
