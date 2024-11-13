@@ -3,7 +3,6 @@ import type { Document } from "mongoose";
 export interface Invitation extends Document {
     title: string;
     name: string;
-    phone: string;
     valid_to: number;
     table: number;
     confirmation: boolean;

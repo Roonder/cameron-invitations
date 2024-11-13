@@ -4,12 +4,14 @@ import Image from "next/image";
 import { great_vibes } from "@/app/fonts"
 
 interface CoverFamilyBannerProps {
-    family: string;
+    title: string;
+    name: string;
     props?: ReactNode;
 }
 
 export const CoverFamilyBanner = forwardRef(({
-    family
+    title,
+    name
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 }: CoverFamilyBannerProps, ref: Ref<HTMLDivElement>) => {
     return (
@@ -21,7 +23,7 @@ export const CoverFamilyBanner = forwardRef(({
                 <Image src={"/assets/corner-flower.png"} width={55} height={55} alt="Decorative Vines" className="absolute -bottom-7 -left-5" />
                 <Image src={"/assets/corner-flower.png"} width={55} height={55} alt="Decorative Vines" className="absolute -bottom-7 -right-5 horizontal-reflect" />
 
-                <p className={`${great_vibes.className} text-4xl text-center`}>{family}</p>
+                <p className={`${great_vibes.className} text-4xl text-center`}>{title} {name}</p>
             </div>
         </>
     );

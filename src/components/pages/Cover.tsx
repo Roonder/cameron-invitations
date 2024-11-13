@@ -3,16 +3,18 @@ import { Ref, forwardRef, ReactNode } from "react";
 import { CoverLayout } from "../layout/CoverLayout";
 
 interface CoverProps {
-    family: string;
+    title: string;
+    name: string;
     props?: ReactNode;
 }
 
 export const Cover = forwardRef(({
-    family,
+    title,
+    name,
     ...props
 }: CoverProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <CoverLayout family={family} ref={ref} {...props} />
+        <CoverLayout name={name} title={title} ref={ref} {...props} />
     );
 });
 

@@ -41,10 +41,12 @@ export async function GET(req: NextRequest) {
     }
 }
 
-export default async function PUT(req: NextRequest) {
+export async function PUT(req: NextRequest) {
     await connect();
 
     const body: InvitationDTO = await req.json();
+
+    console.log(body);
 
     try {
         const updateInvitation = await Invitation.findByIdAndUpdate(body._id, {

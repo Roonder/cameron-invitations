@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${lora.className} overflow-hidden`}
+        className={`antialiased ${lora.className} overflow-hidden bg-[url('/assets/british-bg.jpg')] bg-cover bg-no-repeat bg-center bg-blend-lighten min-h-dvh`}
       >
         {children}
       </body>

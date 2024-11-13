@@ -14,15 +14,17 @@ export const PageLayout = forwardRef(({
     ...props
 }: PageLayoutProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <main ref={ref} className="bg-[url('/assets/background.svg')] bg-center bg-cover p-8 h-dvh w-dvw" data-density="soft" {...props}>
-            <CenterFlowers />
-            <section className="h-full w-full bg-inv-marble relative rounded-md overflow-hidden">
-                <VinesDisplay />
-                <FlowersDisplay />
+        <>
+            <div ref={ref} className="bg-[url('/assets/background.svg')] bg-center bg-cover p-8 h-dvh w-dvw" data-density="soft" {...props}>
+                <CenterFlowers />
+                <section className="h-full w-full bg-inv-marble relative rounded-md overflow-hidden">
+                    <VinesDisplay />
+                    <FlowersDisplay />
 
-                {children}
-            </section>
-        </main>
+                    {children}
+                </section>
+            </div>
+        </>
     );
 });
 

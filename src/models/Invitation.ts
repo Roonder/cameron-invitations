@@ -8,9 +8,6 @@ const invitationSchema = new Schema<InvitationInterface>({
     name: {
         type: String
     },
-    phone: {
-        type: String,
-    },
     valid_to: {
         type: Number
     },

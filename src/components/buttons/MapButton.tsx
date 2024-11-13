@@ -8,7 +8,7 @@ export const MapButton = forwardRef(({
     ...props
 }: MapButtonProps, ref: Ref<HTMLButtonElement>) => {
     return (
-        <button className="map" ref={ref} {...props}>
+        <button className="map h-fit" ref={ref} {...props}>
             Dirección
             <div className="icon-1">
                 <svg

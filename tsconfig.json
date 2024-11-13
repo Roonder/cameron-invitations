@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/flipbook/MainPage.jsx", "src/components/flipbook/MobilePage.jsx", "src/components/flipbook/DesktopPage.jsx"],
   "exclude": ["node_modules"]
 }
