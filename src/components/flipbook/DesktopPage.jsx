@@ -20,7 +20,7 @@ export const DesktopPage = forwardRef(({
         <>
             <div className='flex items-center justify-center px-6' ref={ref} {...props}>
                 <HTMLFlipBook 
-                    flippingTime={8e2}
+                    flippingTime={15e2}
                     width={375}
                     height={667}
                     minHeight={667}
@@ -28,8 +28,6 @@ export const DesktopPage = forwardRef(({
                     showCover={true}   
                 >
                     <Cover title={title} name={name} />
-                    <Cover title={title} name={name} />
-                    
                     <FirstPage />
                     <SecondPage valid_to={valid_to} table={table} />
                     <ThirdPage id={id} />

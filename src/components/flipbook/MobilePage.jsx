@@ -20,7 +20,7 @@ export const MobilePage = forwardRef(({
         <>
             <div className='flex items-center justify-center' ref={ref} {...props}>
                 <HTMLFlipBook 
-                    flippingTime={8e2}
+                    flippingTime={3e3}
                     width={375}
                     height={667}
                     minHeight={667}

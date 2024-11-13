@@ -1,4 +1,5 @@
 import { Ref, forwardRef, ReactNode } from "react";
+import Image from "next/image";
 // Components
 import { CoverCornerLeafs } from "../elements/CoverCornerLeafs";
 import { UpperCover } from "../elements/UpperCover";
@@ -19,6 +20,7 @@ export const CoverLayout = forwardRef(({
 }: CoverLayoutProps, ref: Ref<HTMLDivElement>) => {
     return (
         <div ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative" {...props} data-density="hard">
+            <Image src={"/assets/tap.png"} width={20} height={20} alt="Tap aqui" className="absolute top-1/2 -translate-x-1/2 right-10 mt-4 animate-bounce" />
             <div className="border-2 border-inv-palid-pink border-dotted border-spacing-10 p-4 h-full">
                 <section className="h-full w-full relative overflow-hidden border-2 border-inv-brown">
                     <CoverCornerLeafs />
