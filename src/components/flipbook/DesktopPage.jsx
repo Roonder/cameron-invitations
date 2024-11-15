@@ -27,9 +27,9 @@ export const DesktopPage = forwardRef(({
                     maxHeight={1080}     
                     showCover={true}   
                 >
-                    <Cover title={title} name={name} />
-                    <FirstPage />
-                    <SecondPage valid_to={valid_to} table={table} />
+                    <Cover click={false} title={title} name={name} />
+                    <FirstPage click={true} />
+                    <SecondPage click={true} valid_to={valid_to} table={table} />
                     <ThirdPage id={id} />
                 </HTMLFlipBook>
             </div>

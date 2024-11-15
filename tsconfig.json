@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/flipbook/MainPage.jsx", "src/components/flipbook/MobilePage.jsx", "src/components/flipbook/DesktopPage.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/flipbook/MainPage.jsx", "src/components/flipbook/MobilePage.jsx", "src/components/flipbook/DesktopPage.jsx", "src/components/decors/spark.jsx"],
   "exclude": ["node_modules"]
 }

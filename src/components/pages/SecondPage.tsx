@@ -1,22 +1,26 @@
+"use client"
 import { Ref, forwardRef, ReactNode } from "react";
 import Image from "next/image";
 import { great_vibes } from "@/app/fonts";
 // Components
 import { PageLayout } from "../layout/PageLayout";
+import ReactSparkle from "react-sparkle";
 
 interface SecondPageProps {
     table: number;
     valid_to: number;
+    click?: boolean;
     props?: ReactNode;
 }
 
 export const SecondPage = forwardRef(({
     table,
     valid_to,
+    click,
     ...props
 }: SecondPageProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <PageLayout ref={ref} {...props}>
+        <PageLayout ref={ref} click={click} {...props}>
             <div className="py-10">
                 <h2 className={`${great_vibes.className} w-full text-2xl text-center`}>Su número de mesa será</h2>
 
@@ -35,10 +39,18 @@ export const SecondPage = forwardRef(({
                 </p>
 
                 <div className="relative overflow-hidden z-20 mt-1">
-                    <Image src={"/assets/falling-glitter.png"} width={310} height={120} alt="Decorative Vines" className="absolute -translate-x-1/2 left-1/2 -z-[1]" />
+                    <ReactSparkle 
+                        fadeOutSpeed={20}
+                        color={"#e07990"}
+                        newSparkleOnFadeOut={true}
+                        flicker={true}
+                        flickerSpeed={'slow'}
+
+                    />
+                    {/* <Image src={"/assets/falling-glitter.png"} width={310} height={120} alt="Decorative Vines" className="absolute -translate-x-1/2 left-1/2 -z-[1]" /> */}
                     <Image src={"/assets/dancing-couple.svg"} width={300} height={120} alt="Decorative Vines" className="mx-auto mt-2 z-10" />
-                    <Image src={"/assets/glitter.gif"} width={120} height={120} alt="Decorative Vines" className="absolute left-1/2 ml-2 bottom-5 -z-[1]" />
-                    <Image src={"/assets/glitter.gif"} width={120} height={120} alt="Decorative Vines" className="absolute right-1/2 mr-2 bottom-5 -z-[1]" />
+                    {/* <Image src={"/assets/glitter.gif"} width={120} height={120} alt="Decorative Vines" className="absolute left-1/2 ml-2 bottom-5 -z-[1]" />
+                    <Image src={"/assets/glitter.gif"} width={120} height={120} alt="Decorative Vines" className="absolute right-1/2 mr-2 bottom-5 -z-[1]" /> */}
                 </div>
 
                 <p className="text-xs px-4 text-justify mt-2">

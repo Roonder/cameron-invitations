@@ -6,6 +6,7 @@ import { toast, Flip } from "react-toastify";
 // Components
 import { PageLayout } from "../layout/PageLayout";
 import { great_vibes } from "@/app/fonts";
+import ReactSparkle from "react-sparkle";
 // Types
 import { ObjectId } from "mongoose";
 
@@ -84,7 +85,15 @@ export const ThirdPage = forwardRef(({
                     <Image src={"/assets/money1.svg"} width={35} height={35} alt="Decorative Vines" className="" />
                     <Image src={"/assets/money2.svg"} width={35} height={35} alt="Decorative Vines" className="" />
                     <Image src={"/assets/money3.svg"} width={35} height={35} alt="Decorative Vines" className="" />
-                    <Image src={"/assets/falling-glitter.png"} width={310} height={120} alt="Decorative Vines" className="absolute -translate-x-1/2 left-1/2 -top-14 -z-[1] opacity-60" />
+                    {/* <Image src={"/assets/falling-glitter.png"} width={310} height={120} alt="Decorative Vines" className="absolute -translate-x-1/2 left-1/2 -top-14 -z-[1] opacity-60" /> */}
+                    <ReactSparkle 
+                        count={100}
+                        fadeOutSpeed={20}
+                        color={"#e07990"}
+                        newSparkleOnFadeOut={true}
+                        flicker={true}
+                        flickerSpeed={'slow'}
+                    />
                 </div>
     
                 <p className="text-xs px-4 text-justify mt-4 mb-2">

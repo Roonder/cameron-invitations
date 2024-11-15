@@ -20,16 +20,16 @@ export const MobilePage = forwardRef(({
         <>
             <div className='flex items-center justify-center' ref={ref} {...props}>
                 <HTMLFlipBook 
-                    flippingTime={3e3}
+                    flippingTime={15e2}
                     width={375}
                     height={667}
                     minHeight={667}
                     maxHeight={667}  
                     swipeDistance={10}       
                 >
-                    <Cover title={title} name={name} />
-                    <FirstPage number={1} />
-                    <SecondPage number={2} valid_to={valid_to} table={table} />
+                    <Cover click={true} title={title} name={name} />
+                    <FirstPage click={true} number={1} />
+                    <SecondPage click={true} number={2} valid_to={valid_to} table={table} />
                     <ThirdPage number={3} id={id} />
                 </HTMLFlipBook>
             </div>

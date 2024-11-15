@@ -16,7 +16,8 @@ export default {
           marble: "#f0eee8",
           "palid-pink": "#eea8b2",
           black: "#232423",
-          brown: "#aa7545"
+          brown: "#aa7545",
+          gold: "#eba572"
         }
       },
     },
