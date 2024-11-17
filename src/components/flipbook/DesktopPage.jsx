@@ -18,7 +18,6 @@ export const DesktopPage = forwardRef(({
     table,
     valid_to,
     once,
-    kids,
     ...props
 }, ref) => {    
     return (
@@ -38,7 +37,7 @@ export const DesktopPage = forwardRef(({
                     <FirstPage click={true} />
                     <SecondPage click={true} valid_to={valid_to} table={table} />
                     <AuxPage />
-                    <ThirdPage click={true} id={id} kids={kids} />
+                    <ThirdPage click={true} id={id} />
                     <FinalPage />
                 </HTMLFlipBook>
             </div>

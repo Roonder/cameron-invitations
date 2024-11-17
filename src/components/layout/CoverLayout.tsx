@@ -1,4 +1,4 @@
-import { Ref, forwardRef, ReactNode } from "react";
+import { Ref, forwardRef, useMemo, ReactNode } from "react";
 import Image from "next/image";
 // Components
 import { CoverCornerLeafs } from "../elements/CoverCornerLeafs";
@@ -20,6 +20,19 @@ export const CoverLayout = forwardRef(({
     click,
     ...props
 }: CoverLayoutProps, ref: Ref<HTMLDivElement>) => {
+    const titleMemo = useMemo(() => {
+        switch(true) {
+            case title.includes("os"):
+                return "Estimados";
+            case title.includes("o"):
+                return "Estimado";
+            case title.includes("as"):
+                return "Estimadas";
+            default:
+                return "Estimada"
+        }
+    }, [title])
+
     return (
         <div ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative" {...props} >
             {click && (
@@ -30,7 +43,7 @@ export const CoverLayout = forwardRef(({
                     <CoverCornerLeafs />
                     <UpperCover />
                     <CoverMirror />
-                    <CoverFamilyBanner name={name}title={title} />
+                    <CoverFamilyBanner name={name} title={title} titleMemo={titleMemo} />
                     <CoverFooter />
                 </section>
             </div>

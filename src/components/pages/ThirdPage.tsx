@@ -12,14 +12,12 @@ import { ObjectId } from "mongoose";
 
 interface ThirdPageProps {
     id: ObjectId;
-    kids?: boolean;
     click?: boolean;
     props?: ReactNode;
 }
 
 export const ThirdPage = forwardRef(({
     id,
-    kids,
     click,
     ...props
 }: ThirdPageProps, ref: Ref<HTMLDivElement>) => {
@@ -132,15 +130,9 @@ export const ThirdPage = forwardRef(({
                     </button>
                 </div>
 
-                {kids ? (
-                    <p className="text-xs px-4 text-justify my-4 font-thin">
-                        Nuestros encantadores <span className="font-semibold">adolescentes se encontrarán cómodamente instalados en el área de Puffs</span>, donde la diversión y la alegría reinarán. ¡Que disfruten la velada!
-                    </p>
-                ) : (
-                    <p className="text-xs px-4 text-justify my-4 font-thin">
-                        La familia Escobar-Martínez agradece de antemano su gentil asistencia y espera recibirlos con los brazos abiertos en este día tan especial.
-                    </p>
-                )}
+                <p className="text-xs px-4 text-justify my-4 font-thin">
+                    Nuestros encantadores <span className="font-semibold">adolescentes se encontrarán cómodamente instalados en el área de Puffs</span>, donde la diversión y la alegría reinarán. ¡Que disfruten la velada!
+                </p>
             </div>
             
         </PageLayout>

@@ -17,7 +17,6 @@ export const MobilePage = forwardRef(({
     table,
     valid_to,
     once,
-    kids,
     ...props
 }, ref) => {    
     return (
@@ -36,7 +35,7 @@ export const MobilePage = forwardRef(({
                     <WelcomePage click={true} once={once} />
                     <FirstPage click={true} />
                     <SecondPage click={true} valid_to={valid_to} table={table} />
-                    <ThirdPage id={id} kids={kids} click={true} />
+                    <ThirdPage id={id} click={true} />
                     <FinalPage />
                 </HTMLFlipBook>
             </div>
