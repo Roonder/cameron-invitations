@@ -4,9 +4,11 @@ import { forwardRef } from "react";
 import HTMLFlipBook from 'react-pageflip';
 // Pages
 import { Cover } from '@/components/pages/Cover';
+import { WelcomePage } from "../pages/WelcomePage";
 import { FirstPage } from "@/components/pages/FirstPage"
 import { SecondPage } from "@/components/pages/SecondPage"
 import { ThirdPage } from "@/components/pages/ThirdPage"
+import { FinalPage } from "../pages/FinalPage";
 
 export const MobilePage = forwardRef(({
     id,
@@ -14,23 +16,28 @@ export const MobilePage = forwardRef(({
     name,
     table,
     valid_to,
+    once,
+    kids,
     ...props
 }, ref) => {    
     return (
         <>
-            <div className='flex items-center justify-center' ref={ref} {...props}>
+            <div className='flex items-center justify-center md:hidden' ref={ref} {...props}>
                 <HTMLFlipBook 
                     flippingTime={15e2}
                     width={375}
                     height={667}
                     minHeight={667}
                     maxHeight={667}  
-                    swipeDistance={10}       
+                    swipeDistance={10}  
+                    startZIndex={0}     
                 >
                     <Cover click={true} title={title} name={name} />
-                    <FirstPage click={true} number={1} />
-                    <SecondPage click={true} number={2} valid_to={valid_to} table={table} />
-                    <ThirdPage number={3} id={id} />
+                    <WelcomePage click={true} once={once} />
+                    <FirstPage click={true} />
+                    <SecondPage click={true} valid_to={valid_to} table={table} />
+                    <ThirdPage id={id} kids={kids} click={true} />
+                    <FinalPage />
                 </HTMLFlipBook>
             </div>
         </>

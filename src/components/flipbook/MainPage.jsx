@@ -1,5 +1,5 @@
 "use client"
-import { forwardRef } from "react";
+import { forwardRef, useRef, useState } from "react";
 import { useParams } from 'next/navigation';
 // Component 
 import { MobilePage } from "./MobilePage";
@@ -15,6 +15,18 @@ export const MainPage = forwardRef(({
 }, _ref) => {
     const params = useParams();
     const { invitations, isLoading } = useInvitations(params?.id);
+    const [once, setOnce] = useState(false);
+    const audioRef = useRef(null);
+
+    const play = async () => {
+        if(!once) {
+            audioRef.current.volume = .2
+            await audioRef.current.play();
+            audioRef.current.volume = .5
+            audioRef.current.volume = 1
+            setOnce(true);
+        }
+    }
 
     if(isLoading) return( 
         <motion.div 
@@ -34,13 +46,18 @@ export const MainPage = forwardRef(({
                 when: "beforeChildren",
                 staggerChildren: 0.3,
             }}
+            onClick={play}
         >
+            <audio ref={audioRef} src="/audio/intro.mp3" />
+
             <MobilePage
                 id={invitations?._id}
                 title={invitations?.title}
                 name={invitations?.name}
                 table={invitations?.table}
                 valid_to={invitations?.valid_to}
+                kids={invitations?.kids}
+                once={once}
                 {...props} 
             />
             <DesktopPage
@@ -49,6 +66,8 @@ export const MainPage = forwardRef(({
                 name={invitations?.name}
                 table={invitations?.table}
                 valid_to={invitations?.valid_to}
+                kids={invitations?.kids}
+                once={once}
                 {...props}
         />
         </motion.div>

@@ -21,7 +21,7 @@ export const CoverLayout = forwardRef(({
     ...props
 }: CoverLayoutProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <div ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative" {...props} data-density="hard">
+        <div ref={ref} className="bg-inv-marble p-4 h-dvh w-dvw relative" {...props} >
             {click && (
                 <Image src={"/assets/tap.png"} width={20} height={20} alt="Tap aqui" className="absolute top-1/2 -translate-x-1/2 right-10 mt-4 animate-bounce" />
             )}

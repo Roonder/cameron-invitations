@@ -12,11 +12,15 @@ import { ObjectId } from "mongoose";
 
 interface ThirdPageProps {
     id: ObjectId;
+    kids?: boolean;
+    click?: boolean;
     props?: ReactNode;
 }
 
 export const ThirdPage = forwardRef(({
     id,
+    kids,
+    click,
     ...props
 }: ThirdPageProps, ref: Ref<HTMLDivElement>) => {
 
@@ -79,7 +83,7 @@ export const ThirdPage = forwardRef(({
     }
 
     return (
-        <PageLayout ref={ref} {...props}>
+        <PageLayout ref={ref} click={click} {...props}>
             <div className="py-10">
                 <div className="w-full flex justify-evenly mt-4 relative z-20">
                     <Image src={"/assets/money1.svg"} width={35} height={35} alt="Decorative Vines" className="" />
@@ -110,19 +114,33 @@ export const ThirdPage = forwardRef(({
                 </p>
 
                 <div className="w-full flex items-center justify-evenly mt-2">
-                    <button onClick={confirm} className="relative z-40">
+                    <button onClick={(e) => {
+                        e.stopPropagation();
+
+                        confirm();
+                    }} className="relative z-[9999]">
                         <Image src={"/assets/leaf-button.svg"} width={100} height={100} alt="Decorative Vines" className="" />
                         <p className={`${great_vibes.className} text-xl absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 mt-1 w-fit`}>Asistiré</p>
                     </button>
-                    <button onClick={deny} className="relative z40">
+                    <button onClick={(e) => {
+                        e.stopPropagation();
+
+                        deny();
+                    }} className="relative z-[9999]">
                         <Image src={"/assets/leaf-button.svg"} width={100} height={100} alt="Decorative Vines" className="" />
                         <p className={`${great_vibes.className} text-xl absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 mt-1 w-[5rem]`}>No asistiré</p>
                     </button>
                 </div>
 
-                <p className="text-xs px-4 text-justify my-4 font-thin">
-                La familia Escobar-Martínez agradece de antemano su gentil asistencia y espera recibirlos con los brazos abiertos en este día tan especial.
-                </p>
+                {kids ? (
+                    <p className="text-xs px-4 text-justify my-4 font-thin">
+                        Nuestros encantadores <span className="font-semibold">adolescentes se encontrarán cómodamente instalados en el área de Puffs</span>, donde la diversión y la alegría reinarán. ¡Que disfruten la velada!
+                    </p>
+                ) : (
+                    <p className="text-xs px-4 text-justify my-4 font-thin">
+                        La familia Escobar-Martínez agradece de antemano su gentil asistencia y espera recibirlos con los brazos abiertos en este día tan especial.
+                    </p>
+                )}
             </div>
             
         </PageLayout>

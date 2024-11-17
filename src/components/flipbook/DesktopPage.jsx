@@ -4,9 +4,12 @@ import { forwardRef } from "react";
 import HTMLFlipBook from 'react-pageflip';
 // Pages
 import { Cover } from '@/components/pages/Cover';
+import { WelcomePage } from "../pages/WelcomePage";
+import { AuxPage } from "../pages/AuxPage";
 import { FirstPage } from "@/components/pages/FirstPage"
 import { SecondPage } from "@/components/pages/SecondPage"
 import { ThirdPage } from "@/components/pages/ThirdPage"
+import { FinalPage } from "../pages/FinalPage";
 
 export const DesktopPage = forwardRef(({
     id,
@@ -14,6 +17,8 @@ export const DesktopPage = forwardRef(({
     name,
     table,
     valid_to,
+    once,
+    kids,
     ...props
 }, ref) => {    
     return (
@@ -28,9 +33,13 @@ export const DesktopPage = forwardRef(({
                     showCover={true}   
                 >
                     <Cover click={false} title={title} name={name} />
+                    <AuxPage />
+                    <WelcomePage click={true} once={once} />
                     <FirstPage click={true} />
                     <SecondPage click={true} valid_to={valid_to} table={table} />
-                    <ThirdPage id={id} />
+                    <AuxPage />
+                    <ThirdPage click={true} id={id} kids={kids} />
+                    <FinalPage />
                 </HTMLFlipBook>
             </div>
         </>

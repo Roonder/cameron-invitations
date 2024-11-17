@@ -20,6 +20,22 @@ export default {
           gold: "#eba572"
         }
       },
+      keyframes: {
+        starScale: {
+          "from, to": {
+            transform: "rotate(0) scale(0)",
+            opacity: "0",
+          },
+
+          "50%": {
+            transform: "rotate(180deg) scale(1)",
+            opacity: "1",
+          },
+        }
+      },
+      animation: {
+        starScale: "starScale 1600ms ease infinite"
+      }
     },
   },
   plugins: [],
