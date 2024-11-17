@@ -4,7 +4,7 @@ export interface Invitation extends Document {
     title: string;
     name: string;
     valid_to: number;
-    table: number;
+    table: number | string;
     confirmation: boolean;
     kids?: boolean;
     confirmed_at: Date;

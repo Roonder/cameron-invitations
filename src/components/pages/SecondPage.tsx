@@ -7,7 +7,7 @@ import { PageLayout } from "../layout/PageLayout";
 import ReactSparkle from "react-sparkle";
 
 interface SecondPageProps {
-    table: number;
+    table: number | string;
     valid_to: number;
     click?: boolean;
     props?: ReactNode;
@@ -29,10 +29,10 @@ export const SecondPage = forwardRef(({
                     <Image src={"/assets/golden-leave.png"} width={140} height={50} alt="Decorative Vines" className="absolute -translate-y-1/2 top-[35%] -right-5 -z-10 horizontal-reflect" />
                     <Image src={"/assets/golden-leave.png"} width={140} height={50} alt="Decorative Vines" className="absolute -translate-y-1/2 top-1/2 -left-5 -z-10 " />
                     <Image src={"/assets/mirror-flowers.png"} width={60} height={60} alt="Decorative Vines" className="absolute -translate-x-1/2 left-1/2 -top-6 -ml-8 rotate-45" />
-                    <p className={`${great_vibes.className} text-5xl absolute top-12 -translate-x-1/2 left-1/2 mb-2`}>{table}</p>
+                    <p className={`${great_vibes.className} ${table === "Puff" ? "text-2xl" : "text-5xl"} absolute top-12 -translate-x-1/2 left-1/2 mb-2`}>{table}</p>
                     <Image src={"/assets/mirror-flowers.png"} width={60} height={60} alt="Decorative Vines" className="absolute -translate-x-1/2 right-1/2 -bottom-8 -mr-20 rotate-[230deg]" />
                 </div>
-                <p className={`${great_vibes.className} text-3xl w-full text-center`}>Valido para {valid_to} personas</p>
+                <p className={`${great_vibes.className} text-3xl w-full text-center`}>Valido para {valid_to} {valid_to > 1 ? "personas" : "persona"}</p>
                 <p className="text-xs px-4 text-justify my-3">
                     {/* El atuendo de la velada es de carácter <span className="font-semibold">formal</span> para realzar la elegancia del momento, y se solicita encarecidamente que los más <span className="font-semibold">pequeños de la casa se queden descansando plácidamente en sus hogares.</span> */}
                     El atuendo de la velada es de carácter <span className="font-semibold">formal</span> para realzar la elegancia del momento.

@@ -12,11 +12,11 @@ const invitationSchema = new Schema<InvitationInterface>({
         type: Number
     },
     table: {
-        type: Number
+        type: Schema.Types.Mixed
     },
     confirmation: {
         type: Boolean,
-        default: false
+        default: null
     },
     confirmed_at: {
         type: Date
