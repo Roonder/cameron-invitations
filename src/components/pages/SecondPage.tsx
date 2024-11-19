@@ -54,7 +54,7 @@ export const SecondPage = forwardRef(({
                 </div>
 
                 <p className="text-xs px-4 text-justify mt-2">
-                    La celebración <span className="font-semibold">comenzará a las 8:30pm</span>, y será un honor ver a nuestra quinceañera hacer su <span className="font-semibold">entrada triunfal a las 9:30pm</span>.
+                    La celebración <span className="font-semibold">comenzará a las 8:00pm</span>, y será un honor ver a nuestra quinceañera hacer su <span className="font-semibold">entrada triunfal a las 9:30pm</span>.
                 </p>
             </div>
         </PageLayout>
