@@ -50,7 +50,7 @@ export const CoverFooter = forwardRef(({
             <p className={`text-[10px] absolute bottom-[18.4rem] w-full text-center`}>Nos complace invitarlos a los</p>
             <p className={`text-2xl ${great_vibes.className} absolute bottom-[15.75rem] w-full text-center `}><span className="text-inv-palid-pink font-bold pr-4">.  .  .  .</span><span className="text-5xl">15</span> años<span className="text-inv-palid-pink font-bold pl-4">.  .  .  .</span></p>
             <p className={`text-[10px] absolute bottom-[15.55rem] w-full text-center`}>de</p>
-            <p className={`text-3xl ${great_vibes.className} absolute bottom-[13.55rem] w-full text-center `}>Cameron Angely Escobar</p>
+            <p className={`text-3xl ${great_vibes.className} absolute bottom-[13.55rem] w-full text-center `}>Cameron Angeli Escobar</p>
 
 
             
