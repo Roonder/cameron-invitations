@@ -83,7 +83,7 @@ export const ThirdPage = forwardRef(({
     return (
         <PageLayout ref={ref} click={click} {...props}>
             <div className="py-10">
-                <div className="w-full flex justify-evenly mt-4 relative z-20">
+                <div className="w-full flex justify-evenly mt-2 relative z-20">
                     <Image src={"/assets/money1.svg"} width={35} height={35} alt="Decorative Vines" className="" />
                     <Image src={"/assets/money2.svg"} width={35} height={35} alt="Decorative Vines" className="" />
                     <Image src={"/assets/money3.svg"} width={35} height={35} alt="Decorative Vines" className="" />
@@ -102,7 +102,7 @@ export const ThirdPage = forwardRef(({
                     <span className="font-semibold">Para aquellos que deseen honrar a la cumpleañera con un obsequio de distinción</span>, la quinceañera sugiere que en un sobre le será mejor.
                 </p>
 
-                <Image src={"/assets/golden-leaves.png"} width={300} height={40} alt="Decorative Vines" className="mx-auto my-4" />
+                <Image src={"/assets/golden-leaves.png"} width={300} height={40} alt="Decorative Vines" className="mx-auto my-1" />
 
                 <p className="text-xs px-4 text-justify my-2">
                     Se espera la asistencia de cada uno de ustedes a tan memorable celebración, quienes con su presencia honrarán tan especial ocasión. 
@@ -111,7 +111,7 @@ export const ThirdPage = forwardRef(({
                     Por lo tanto, <span className="font-semibold">puede confirmar o dimitir su asistencia haciendo click en alguno de los siguientes botones</span>. Puede cambiar su estado de asistencia cuando desee.
                 </p>
 
-                <div className="w-full flex items-center justify-evenly mt-2">
+                <div className="w-full flex items-center justify-evenly mt-1">
                     <button onClick={(e) => {
                         e.stopPropagation();
 
@@ -130,7 +130,7 @@ export const ThirdPage = forwardRef(({
                     </button>
                 </div>
 
-                <p className="text-xs px-4 text-justify my-4 font-thin">
+                <p className="text-xs px-4 text-justify my-2 font-thin">
                     Nuestros encantadores <span className="font-semibold">adolescentes se encontrarán cómodamente instalados en el área de Puffs</span>, donde la diversión y la alegría reinarán. ¡Que disfruten la velada!
                 </p>
             </div>

@@ -3,7 +3,6 @@ import Image from "next/image";
 // Fonts
 import { great_vibes } from "@/app/fonts";
 // Components
-import { motion } from "framer-motion" 
 import { PageLayout } from "../layout/PageLayout";
 
 interface WelcomePageProps {
@@ -34,29 +33,12 @@ export const WelcomePage = forwardRef(({
 
                 {once && (
                     <>
-                        <motion.h1
-                            animate={{ y: [-100, 20], opacity: [.25, 1], scale: 1.25 }}
-                            transition={{
-                                duration: 3,
-                                delay: 0.3,
-                            }}
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            className={`${great_vibes.className} text-4xl`}
-                        >
+                        <h1 className={`${great_vibes.className} text-5xl mt-3 delay-200 transition-all ease-in`}>
                             Querido y gentil
-                        </motion.h1>
-                        <motion.h3
-                            animate={{ y: [1000, 25], opacity: [.25, 1], scale: 1.25 }}
-                            transition={{
-                                duration: 3,
-                                delay: 0.3,
-                            }}
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            whileHover={{ scale: 1.2 }}
-                            className={`${great_vibes.className} inline-block text-3xl relative`}
-                        >
+                        </h1>
+                        <h3 className={`${great_vibes.className} inline-block text-4xl relative`}>
                             lector
-                        </motion.h3>
+                        </h3>
                     </>
                 )}
             </div>

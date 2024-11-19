@@ -22,7 +22,7 @@ export const SecondPage = forwardRef(({
     return (
         <PageLayout ref={ref} click={click} {...props}>
             <div className="py-10">
-                <h2 className={`${great_vibes.className} w-full text-2xl text-center`}>Su número de mesa será</h2>
+                <h2 className={`${great_vibes.className} w-full text-2xl text-center`}>{table === "Puff" ? "Usted estará en la zona de" : "Su número de mesa será"}</h2>
 
                 <div className="relative z-20">
                     <Image src={"/assets/oval-mirror.png"} width={140} height={50} alt="Decorative Vines" className="mx-auto -mt-2 z-10" />

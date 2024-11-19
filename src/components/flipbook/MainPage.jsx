@@ -48,7 +48,7 @@ export const MainPage = forwardRef(({
             }}
             onClick={play}
         >
-            <audio ref={audioRef} src="/audio/intro.mp3" />
+            <audio ref={audioRef} src="/audio/intro.mp3" loop />
 
             <MobilePage
                 id={invitations?._id}

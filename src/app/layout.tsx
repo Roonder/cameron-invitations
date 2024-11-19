@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`antialiased ${lora.className} overflow-hidden bg-[url('/assets/british-bg.jpg')] bg-cover bg-no-repeat bg-center bg-blend-lighten min-h-dvh`}
       >
