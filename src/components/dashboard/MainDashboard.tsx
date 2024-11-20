@@ -22,7 +22,7 @@ export const MainDashboard = forwardRef(({
             
             if(filter === "confirmed") return invitations.filter((invitation: Invitation) => invitation.confirmation);
             
-            if(filter === "denied") return invitations.filter((invitation: Invitation) => !invitation.confirmation);
+            if(filter === "denied") return invitations.filter((invitation: Invitation) => invitation.confirmation === false);
         }
 
         return [];
